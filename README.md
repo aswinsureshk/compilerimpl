@@ -1,4 +1,4 @@
-CFG for the language to be compiled :
+CFG for the language :
 
 Program -> Identifier Block
 
