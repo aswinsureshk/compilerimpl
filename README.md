@@ -1,4 +1,4 @@
-CFG for the language :
+CFG :
 
 Program -> Identifier Block
 
