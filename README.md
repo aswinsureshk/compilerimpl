@@ -1,51 +1,51 @@
 CFG for the language to be compiled :
 
-Program  Identifier Block
+Program -> Identifier Block
 
-Block  { ( (Declaration | Statement) ; )* }
+Block -> { ( (Declaration | Statement) ; )* }
 
-Declaration  Type Identifier ( = Expression |  ) | Type IDENTIFIERLIST
+Declaration -> Type Identifier ( = Expression |  ) | Type IDENTIFIERLIST
 
-IDENTIFIERLIST  Identifier (, Identifier)*
+IDENTIFIERLIST -> Identifier (, Identifier)*
 
-Type  int | float | boolean | char | string
+Type -> int | float | boolean | char | string
 
-Statement  IfStatement | AssignmentStatement | SleepStatement 
+Statement -> IfStatement | AssignmentStatement | SleepStatement 
 | PrintStatement | WhileStatment
 
-IfStatement  if ( Expression ) Block
+IfStatement -> if ( Expression ) Block
 
-WhileStatement  while ( Expression ) Block
+WhileStatement -> while ( Expression ) Block
 
-AssignmentStatement  Identifier = Expression
+AssignmentStatement -> Identifier = Expression
 
-SleepStatement  sleep Expression
+SleepStatement -> sleep Expression
 
-PrintStatement  print Expression
+PrintStatement -> print Expression
 
-Expression  OrExpression ? Expression : Expression | OrExpression
+Expression -> OrExpression ? Expression : Expression | OrExpression
 
-OrExpression  AndExpression ( | AndExpression )*
+OrExpression -> AndExpression ( | AndExpression )*
 
-AndExpression  EqExpression ( & EqExpression )*
+AndExpression -> EqExpression ( & EqExpression )*
 
-EqExpression  RelExpression ( ( == | != ) RelExpression )*
+EqExpression -> RelExpression ( ( == | != ) RelExpression )*
 
-RelExpression  AddExpression ( ( < | > | <= | >= ) AddExpression )*
+RelExpression -> AddExpression ( ( < | > | <= | >= ) AddExpression )*
 
-AddExpression  MultExpression ( ( + | - ) MultExpression )*
+AddExpression -> MultExpression ( ( + | - ) MultExpression )*
 
-MultExpression  PowerExpression ( ( * | / | % ) PowerExpression )*
+MultExpression -> PowerExpression ( ( * | / | % ) PowerExpression )*
 
-PowerExpression  UnaryExpression ( ** PowerExpression |   )
+PowerExpression -> UnaryExpression ( ** PowerExpression |   )
 
-UnaryExpression  + UnaryExpression | - UnaryExpression | ! UnaryExpression | Primary
+UnaryExpression -> + UnaryExpression | - UnaryExpression | ! UnaryExpression | Primary
 
-Primary  INTEGER_LITERAL | BOOLEAN_LITERAL ​| ​FLOAT_LITERAL | CHAR_LITERAL
+Primary -> INTEGER_LITERAL | BOOLEAN_LITERAL ​| ​FLOAT_LITERAL | CHAR_LITERAL
  ​| ​STRING_LITERAL | ( Expression ) | IDENTIFIER | Function
 
-Function  FunctionName ( Expression )
+Function -> FunctionName ( Expression )
 
-FunctionName  sin | cos | atan | abs | log | int | float
+FunctionName -> sin | cos | atan | abs | log | int | float
 
 
